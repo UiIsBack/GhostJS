@@ -5,7 +5,7 @@ This a remake of my python webhook spammer [ghosthook](https://github.com/uiisba
 how to use
 ========================================================================================
 **Website:**
-1. Open the [website]() 
+1. Open the [website](https://uiisback.github.io/GhostJS/) 
 2. fill in the info
 3. spam
 4. enjoy
