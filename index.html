@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostHook</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<header style="color: #ffffff; margin-top: auto;">
+    <div class="header">
+        <h1 style="color:#ffffff; font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-size: 75px;">GhostHook</h1>
+        <p></p>
+    </div>
+</header>
+
+<body>
+    <h1>a </h1>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❆
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❆
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <div class="snowflake">
+        ❅
+    </div>
+    <div class="snowflake">
+        ❆
+    </div>
+    <div class="snowflake">
+        ❄
+    </div>
+    <p style="font-family: Arial Black,Arial Bold,Gadget,sans-serif;  color: #000000"></p><input type='text' id="link" placeholder="Webhook :">
+    <p>&#160;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p>
+            <p style="font-family: Arial Black,Arial Bold,Gadget,sans-serif;  color: #000000"></p><input type="text" id="username" placeholder="Username :">
+            <p>&#160;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p>
+                    <p style="font-family: Arial Black,Arial Bold,Gadget,sans-serif;  color: #000000"></p><input type="text" id="avatar" placeholder="Avatar URL :">
+                    <p>&#160;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p>
+                            <p style="font-family: Arial Black,Arial Bold,Gadget,sans-serif;  color: #000000"></p><input type="text" id="content" placeholder="Message :">
+                            <br>
+                            <p>
+                                <div class="btn-row">
+                                    <div class="ct-btn">
+                                        <button href="#spam" class="border-neon" onclick="sendMessage()">Spam</button>
+                                    </div>
+
+
+</body>
+
+<script>
+    if (link == null || link == "", content == null || content == "") {
+        alert("Please enter all arguments");
+
+    }
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+
+    async function load() { // We need to wrap the loop into an async function for this to work
+        for (let i = 0; 1 < 40; i++) {
+            const request = new XMLHttpRequest();
+            var inputVal = document.getElementById("link").value;
+            request.open("POST", inputVal);
+            console.log('response.status: ', request.status);
+            request.setRequestHeader('Content-type', 'application/json');
+            var user = document.getElementById("username").value;
+            var av = document.getElementById("avatar").value;
+            var msg = document.getElementById("content").value;
+            const params = {
+                username: user,
+                avatar_url: av,
+                content: msg
+            }
+            request.send(JSON.stringify(params));
+            await timer(30); // then the created Promise can be awaited
+        }
+    }
+
+
+
+    function sendMessage() {
+        load()
+
+    }
+</script>
+
+
+</html>
