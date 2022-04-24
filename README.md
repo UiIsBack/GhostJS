@@ -9,7 +9,11 @@ how to use
 2. fill in the info
 3. spam
 4. enjoy
+
+
 **App:**
+
+
 1. install
 2. extract
 3. open [vs code](https://code.visualstudio.com/download) (have [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension installed)
