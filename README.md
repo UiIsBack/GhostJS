@@ -1,6 +1,7 @@
 # GhostJS
 Webhook spammer online coded with Javascript html and css 
 This a remake of my python webhook spammer [ghosthook](https://github.com/uiisback/ghosthook) (rn its worse but ill be updating)
+=======================================================================================
 how to use
 ========================================================================================
 Website:
